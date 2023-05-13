@@ -1,3 +1,4 @@
+// =========================== Form ============================
 const linkForm = document.getElementById("link-form");
 const linkInput = document.getElementById("link-input");
 const alertMsg = document.getElementById("alert-msg");
@@ -35,4 +36,19 @@ function validURL(str) {
     "i"
   );
   return !!pattern.test(str);
+}
+
+// =========================== Hamburger Menu ============================
+
+// Hamburger icon/menu (mobile only)
+const btn = document.getElementById("menu-btn");
+const menu = document.getElementById("menu");
+
+btn.addEventListener("click", navToggle);
+
+// Toggle hamburger menu (mobile only)
+function navToggle() {
+  btn.classList.toggle("open");
+  menu.classList.toggle("flex");
+  menu.classList.toggle("hidden");
 }
